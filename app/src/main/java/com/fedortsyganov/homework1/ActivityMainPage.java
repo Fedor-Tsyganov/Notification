@@ -16,9 +16,6 @@ public class ActivityMainPage extends Activity
     private String ACTION = "xx.yy.zz";
     private Button button_sendNotification;
 
-    //GitHub test commit. Commit and Push it.
-    //If you reading this, please understand that i'm
-    //learning Git and commits =)
 //*******************************************************
     private void sendNotification()
     {
