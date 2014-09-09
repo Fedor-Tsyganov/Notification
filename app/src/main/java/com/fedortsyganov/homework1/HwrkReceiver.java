@@ -5,9 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-/**
- * Created by fedortsyganov on 9/3/14.
- */
 public class HwrkReceiver extends BroadcastReceiver
 {
     @Override

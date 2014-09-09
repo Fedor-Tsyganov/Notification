@@ -1,6 +1,9 @@
 package com.fedortsyganov.homework1;
 
 import android.app.Activity;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,10 +22,23 @@ public class ActivityMainPage extends Activity
 //*******************************************************
     private void sendNotification()
     {
-        Intent intent = new Intent();
+        Intent intent = new Intent(this, ResultActivity.class);
+        PendingIntent pi = PendingIntent.getActivity(this, 0, intent, 0);
+        Notification notification = new Notification.Builder(this)
+                .setContentTitle("Title")
+                .setContentText("text of notification")
+                .setSmallIcon(R.drawable.abc_ic_search)
+                .setContentIntent(pi).build();
+
         intent.putExtra(KEY, VALUE);
         intent.setAction(ACTION);
         sendBroadcast(intent);
+
+        NotificationManager notificationManager = (NotificationManager)
+                getSystemService(NOTIFICATION_SERVICE);
+
+        notification.flags |= Notification.FLAG_AUTO_CANCEL;
+        notificationManager.notify(0, notification);
     }
 //******************************************************
     @Override
