@@ -5,12 +5,14 @@
     tools:context="com.fedortsyganov.homework1.ResultActivity">
 
     <TextView
-        android:text="@string/hello_world"
+        android:text="@string/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/tv_result"/>
+        android:id="@+id/tv_result"
+        android:textStyle="italic"
+        android:gravity="center"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"

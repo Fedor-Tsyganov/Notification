@@ -2,7 +2,10 @@
 <resources>
 
     <string name="app_name">Homework1</string>
-    <string name="hello_world">Result Activity</string>
+    <string name="result">
+        You are in the activity that opened when you pushed on notification. \n
+        In order to go back, push button that says "Go Back"
+    </string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_result">ResultActivity</string>
 
