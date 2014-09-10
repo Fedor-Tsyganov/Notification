@@ -12,9 +12,9 @@ public class HwrkReceiver extends BroadcastReceiver
 {
     private String KEY = "HomeworkOne";
     private String ACTION = "xx.yy.zz";
-    private static int NOTIFY_ME_ID = 1834;
+    private static int NOTIFY_ME_ID = 1834; //unique ID
     Notification notification;
-    String notifMessage = "New message from Broadcast";
+    String notifMessage = "New message from Broadcast"; //message
 
     //************************onReceive()********************************
     @Override
@@ -28,12 +28,14 @@ public class HwrkReceiver extends BroadcastReceiver
             sendNotification(context, msg);
         }
     }
-    //************************Notification()*****************************
+    //************************sendNotification()*****************************
     public void sendNotification(Context mContext, String message)
     {
+        //when user push on a notification, new activity opens
         Intent intent = new Intent(mContext, ResultActivity.class);
         PendingIntent pi = PendingIntent.getActivity(mContext, 0, intent, 0);
 
+        //building notification
         notification = new Notification.Builder(mContext)
                 .setContentTitle("Broadcast received")
                 .setContentText(message)
